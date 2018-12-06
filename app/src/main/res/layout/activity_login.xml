@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:windowSoftInputMode="adjustResize">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/red">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/signup_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/s20" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <!-- Login progress -->
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/email_login_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/emaillayout"
+        android:layout_marginTop="@dimen/d3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <AutoCompleteTextView
+            android:id="@+id/email"
+            style="@style/SignupEditText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d6"
+            android:layout_marginStart="@dimen/d2"
+            android:layout_marginEnd="@dimen/d2"
+            android:hint="@string/signup_email_hint"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:singleLine="true" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/password_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/d2"
+        android:layout_marginTop="@dimen/dime1"
+        android:layout_marginEnd="@dimen/d2"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emaillayout"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@drawable/password_toggle_color">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/password"
+            style="@style/SignupEditText.Password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d6"
+            android:hint="@string/signup_password_hint" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/passwordDescription"
+        style="@style/Description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/d2"
+        android:layout_marginTop="@dimen/dime1"
+        android:layout_marginEnd="@dimen/d2"
+        android:text="@string/signup_password_description"
+        android:textSize="@dimen/s14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_container" />
+
+    <Button
+        android:id="@+id/activity_login.xml"
+        style="@style/PrimaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/d2"
+        android:layout_marginTop="@dimen/d2"
+        android:layout_marginEnd="@dimen/d2"
+        android:text="@string/signup_continue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordDescription" />
+    </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
+
