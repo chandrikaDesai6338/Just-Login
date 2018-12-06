@@ -5,21 +5,6 @@
     android:layout_height="match_parent"
     android:windowSoftInputMode="adjustResize">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        android:background="@color/red">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:text="@string/signup_title"
-            android:textColor="@color/white"
-            android:textSize="@dimen/s20" />
-
-    </android.support.v7.widget.Toolbar>
 
     <!-- Login progress -->
     <ProgressBar
@@ -27,11 +12,15 @@
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginBottom="8dp"
         android:visibility="gone" />
     <ScrollView
         android:id="@+id/login_form"
         android:layout_width="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:layout_height="match_parent">
 
     <LinearLayout
@@ -44,10 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/emaillayout"
-        android:layout_marginTop="@dimen/d3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+        android:layout_marginTop="@dimen/d3">
 
         <AutoCompleteTextView
             android:id="@+id/email"
@@ -100,7 +86,7 @@
         app:layout_constraintTop_toBottomOf="@+id/password_container" />
 
     <Button
-        android:id="@+id/activity_login.xml"
+        android:id="@+id/email_sign_in_button"
         style="@style/PrimaryButton"
         android:layout_width="match_parent"
         android:layout_height="40dp"

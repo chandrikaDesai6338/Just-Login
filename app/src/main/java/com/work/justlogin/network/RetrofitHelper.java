@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitHelper {
 
-    public static String BASE_URL = "https://api.myjson.com/bins/s8cgi";
+    public static String BASE_URL = "https://api.myjson.com/bins/";
 
     public RetrofitAPIInterface getRetrofitAPIInterface(){
         final Retrofit retrofit = createRetrofit();
