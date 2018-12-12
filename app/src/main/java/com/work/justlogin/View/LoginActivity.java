@@ -203,8 +203,8 @@ public class LoginActivity extends AppCompatActivity implements Presenter.MyView
             if (success) {
                 updateUi(success);
             } else {
-                mPasswordView.setError(getString(R.string.error_incorrect_password));
-                mPasswordView.requestFocus();
+              // mPasswordView.setError(getString(R.string.error_incorrect_password));
+               // mPasswordView.requestFocus();
             }
         }
 

@@ -71,7 +71,7 @@ public class Presenter {
             @Override
             public void onResponse(Call<Response1> call, Response<Response1> response) {
                 myView.updateUi(response.body().getSuccess());
-                success[0] = false;
+                success[0] = true;
             }
 
             @Override
